@@ -1,0 +1,1 @@
+This is a project I've started to store code snippets that I have built to further my own understanding. Here you may find various well documented code snippets demonstrating and applying CS topics from DSA and Algs. to programming principles at play.
