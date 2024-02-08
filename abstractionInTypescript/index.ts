@@ -1,4 +1,4 @@
-//ABSTACTION
+//ABSTRACTION
 //-------------------
 
 /*
