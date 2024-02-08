@@ -40,30 +40,29 @@ class Patient {
 let Patient1: Patient = new Patient("First Class", "Billy");
 
 //---------------------------------------------|
-
 /*
-This throws an error because the insuranceLevel property is private and can only be accessed fom WITHIN the class it's from,
-which is done purposely. Using the example of healthcare patients, usually you wouldn't want someone knowing what level of
-insurance you have. Therefore this data is kept private and is not able to be accessed from outside the class itself.
-
-The implications for this are writing more secure code, as well as writing more readable (and therefore maintainable and extendable) code. Nobody can poke around data they shouldn't be able to, and also people maintaining the Patient class will see how that peice of data relates to all the other code.
+    One of the main implications for this is writing more secure code, since you can control who or what has access and how. Other benefits are more readable, maintainable, and extendable code, which stem from
+    the information provided by access modifiers. Depending on the access modifier of a method or attribute, a developer can more easily tell what a method or attribute's role is in it's class.
+*/
+/*
+    This throws an error because the insuranceLevel property is private and can only be accessed fom WITHIN the class it's from,
+    which is done purposely. Using the example of healthcare patients, usually you wouldn't want someone knowing oer having uncontrolled access to what level of
+    insurance you have. Therefore this data is kept private and is not able to be accessed from outside the class itself.
 */
 console.log(Patient1.insuranceLevel);
-
 //---------------------------------------------|
-
 /*
-Use of getters to access encapsulated data...
+    Use of getters to access encapsulated data as essentially readonly...
+        -> Sidenote: Typescript does have a readonly modifier, make use of that if you want the data readonly and unmodifiable.
 
-However there is still a way to get the insuranceLevel property from outside the class.
-
-We coded in the method getInsuranceLevel() which returns the value of our insuranceLevel property. This method is public meaning we can call it from outside the class, but can access private 'Patient' data since it is still technically within the class.
-
-Although this gives up some possible security since there is now a way to access this data, it's done so in a way that is more controllable than making the property public in the first place. If we had done that anyone would have free range to the property, and if accessed in this way our code will become overly complicated since there is no additional information other than the one line value change somewhere else in our code. With this new properly encapsulated method we can choose where the insuranceLevel variable is accessed from. And we can also control how, by only allowing a retrieval of the information through functionality implemented in the 'get' method (a.k.a getter) as opposed to allowing a reassignment as well.
-
-This technique for encapsulating and then accessing encapsulated data is shown below.
+    However there is still a way to get the insuranceLevel property from outside the class, which would be through the method getInsuranceLevel() which returns the value of our insuranceLevel property. 
+    This method has the public modifier meaning we can call it from outside the class and it will return the patient's insurance level even though it's private. This works because the 
+    method 'getInsuranceLevel()' has access to private properties inside the class, but can still be called from outside since it is public. It's like a hook into the 
+    encapsulated data (class). You can also think of it as looking through a peephole of a chest where the peephole is our getInsuranceLevel() method, and the chest
+    is our class that holds the data inside.
 */
 
+//Printing the output of our 'hook' or 'peephole' method which allows us to view the data inside the chest (class)
 console.log(Patient1.getInsuranceLevel());
 
 
