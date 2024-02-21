@@ -1,4 +1,4 @@
-# Software Construction Design Notes (Following reading of _Code Complete_ by Steve McConnel
+# Software Construction Design Notes (Following reading of _Code Complete_ by Steve McConnell
 * Software design is the process of converting a real world
   problem into a programming solution.
 
