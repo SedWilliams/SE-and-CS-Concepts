@@ -5,6 +5,9 @@
 * The primary goal of software design is to minimize the accidental
   and essential complexities of converting real life to
   ones and zeroes.
+
+* A good programmer is one that handles complexity well, and designing good software is the act
+  of leveraging design principles to handle the complexity of code.
 ---
 ### Characteristics of the Software Design process.
 Software design is...
